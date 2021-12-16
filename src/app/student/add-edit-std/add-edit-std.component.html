@@ -1,0 +1,27 @@
+<div class="form-froup row">
+    <label class="col-sm-2 col-form-label">Student Id</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="student_id" placeholder="Enter Student Id">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Student Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="student_name" placeholder="Enter Student Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Student City</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="student_city" placeholder="Enter Student City">
+    </div>
+    <label class="col-sm-2 col-form-label">Student course</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="student_course" placeholder="Enter Student Course">
+    </div>
+</div>
+
+<button (click)="addStudent()" *ngIf="std.student_id==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateStudent()" *ngIf="std.student_id!=0" class="btn btn-primary">
+    Update
+</button>
